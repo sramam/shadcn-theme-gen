@@ -1,0 +1,27 @@
+{
+  "name": "shadcn-theme-gen",
+  "version": "1.0.0",
+  "description": "A simple utility to generate shadcn-theme",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "shadcn-theme-gen": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "sramam",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/stringify-object": "^3.3.1",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "stringify-object": "^3.3.0"
+  }
+}
