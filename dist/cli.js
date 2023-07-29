@@ -73,7 +73,7 @@ function cli() {
         const dst = path.resolve(dir);
         fs.mkdirSync(dst, { recursive: true });
         try {
-            fs.accessSync(`${dst}/config.js`, fs.constants.R_OK | fs.constants.W_OK);
+            fs.accessSync(`${dst}/config.ts`, fs.constants.R_OK | fs.constants.W_OK);
         }
         catch (err) {
             // config file does not exist
@@ -81,7 +81,7 @@ function cli() {
             // while this seems like an anti-pattern, we are doing this to
             // preserve any previously generated config - it may have been modified
             // by the user.
-            fs.writeFileSync(`${dst}/config.js`, config, "utf8");
+            fs.writeFileSync(`${dst}/config.ts`, config, "utf8");
         }
         (0, generateThemes_1.generateThemes)(colors, dst, fs.writeFileSync);
         console.log(`\ncustom shadcn-ui themes initialized to '${dir}'`);

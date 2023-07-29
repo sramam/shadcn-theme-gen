@@ -12,19 +12,20 @@ function default_1() {
         ` * NOTE: Currently, this needs to be a JavaScript file.`,
         ` */`,
         ``,
-        `/** @type {import('tailwindcss').Config} */`,
+        `import { Config } from "tailwindcss";`,
+        ``,
         `const config = ${(0, stringify_object_1.default)(config, {
             indent: "  ",
             singleQuotes: false,
-        })}`,
-        `  ]`,
+        })} satisfies Config`,
         ``,
-        `module.exports = config;`,
+        `export default config;`,
         ``,
     ].join("\n");
 }
 exports.default = default_1;
 const config = {
+    content: [],
     theme: {
         container: {
             center: true,

@@ -7,19 +7,20 @@ export default function () {
     ` * NOTE: Currently, this needs to be a JavaScript file.`,
     ` */`,
     ``,
-    `/** @type {import('tailwindcss').Config} */`,
+    `import { Config } from "tailwindcss";`,
+    ``,
     `const config = ${stringifyObject(config, {
       indent: "  ",
       singleQuotes: false,
-    })}`,
-    `  ]`,
+    })} satisfies Config`,
     ``,
-    `module.exports = config;`,
+    `export default config;`,
     ``,
   ].join("\n");
 }
 
 const config = {
+  content: [],
   theme: {
     container: {
       center: true,

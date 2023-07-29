@@ -4,8 +4,10 @@
  * NOTE: Currently, this needs to be a JavaScript file.
  */
 
-/** @type {import('tailwindcss').Config} */
+import { Config } from "tailwindcss";
+
 const config = {
+  content: [],
   theme: {
     container: {
       center: true,
@@ -95,7 +97,6 @@ const config = {
       }
     }
   }
-}
-  ]
+} satisfies Config
 
-module.exports = config;
+export default config;
