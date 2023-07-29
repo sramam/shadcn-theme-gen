@@ -4,7 +4,8 @@
   "description": "A simple utility to generate shadcn-theme",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "pnpm build && rm -rf ./themes && node dist/index.js"
   },
   "bin": {
     "shadcn-theme-gen": "dist/index.js"
